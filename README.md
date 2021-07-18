@@ -33,14 +33,22 @@
     * **D** para el resto de jugadores.
 
    ***tip** para resolver este ejercicio, mire el método de ejemplo exampleWindowFunction incluido en el código.*
+   
+   
 3. Agregaremos una columna `potential_vs_overall` con la siguiente regla:
     * Columna `potential` dividida por la columna `overall`
+    
+    
 4. Filtraremos de acuerdo a las columnas `player_cat` y `potential_vs_overall` con las siguientes condiciones:
     * Si `player_cat` esta en los siguientes valores: **A**, **B**
     * Si `player_cat` es **C** y `potential_vs_overall` es superior a **1.15**
     * Si `player_cat` es **D** y `potential_vs_overall` es superior a **1.25**
+    
+    
 5. Agregar un parametro al archivo params que de ser 1 realice todos los pasos únicamente para los jugadores menores de 23 años 
     y en caso de ser 0 que lo haga con todos los jugadores del dataset.
+    
+    
 6. Por favor escriba la tabla resultante de los pasos anteriores particionada por la columna `nationality`, la salida
    debe estar escrita en formato **parquet** y debe usarse el método `coalese(1)`
    para obtener solo un archivo por partición.
