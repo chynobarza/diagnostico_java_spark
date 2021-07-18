@@ -9,13 +9,22 @@ import static org.apache.spark.sql.SaveMode.Overwrite;
 
 abstract class Writer {
 
-    static void write(Dataset<Row> df) {
+    static void write(Dataset<Row> df, String finalFile) {
         df
                 .coalesce(2)
                 .write()
                 .partitionBy(teamPosition.getName())
                 .mode(Overwrite)
-                .parquet(OUTPUT_PATH);
+                .parquet(finalFile);
+    }
+
+    static void write2(Dataset<Row> df){
+        df
+                .coalesce(1)
+                .write().format("com.databricks.spark.csv")
+                .option("header", "true")
+                .mode(Overwrite)
+                .save("mydata.csv");
     }
 
 }
