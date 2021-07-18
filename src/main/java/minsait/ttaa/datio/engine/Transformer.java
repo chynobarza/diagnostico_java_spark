@@ -1,6 +1,6 @@
 package minsait.ttaa.datio.engine;
 
-import minsait.ttaa.datio.utils.Properties;
+import minsait.ttaa.datio.Properties;
 import org.apache.spark.sql.Column;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
